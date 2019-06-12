@@ -1,3 +1,15 @@
+/* This code works on ESP32 ONLY, 
+   If you are going to use ESP8266, then replace WiFi.h to ESP8266WiFi.h
+   This was tested on ESP32 ( v1DevKit)
+   
+   The code connects to two TM1637 7 segment displays and displays Time on one,
+   Temperature on another display.
+
+   The time zone is converted to IST ( Indian Standard Time ) after it gets from NTP.
+
+*/
+
+   
 #include <Arduino.h>
 #include <TM1637Display.h>
 
@@ -14,8 +26,8 @@ dht DHT;
 #define DHT11_PIN 5
 
 
-const char *ssid     = "NETGEAR84";
-const char *password = "welcome2ibm";
+const char *ssid     = "YOUR Wireless Credentials";
+const char *password = "Wireless Router password";
 
 String timestr;
 String hourStamp, minStamp;

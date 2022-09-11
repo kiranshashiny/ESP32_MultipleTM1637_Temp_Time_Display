@@ -1,3 +1,25 @@
+
+Updated on Sep 11 2022
+
+To print just the date 12:30 on the display - do this.
+
+```	
+   display.clear();
+  display.showNumberDec(12, true, 2);  // Expect: 12__
+  delay(TEST_DELAY);
+
+  display.clear();
+  display.showNumberDec(30, true, 2,2);  // Expect: __30
+  delay(TEST_DELAY);
+  
+  display.clear();
+  display.showNumberDec(1230);  // Expect: 1230
+  delay(TEST_DELAY);
+
+```
+
+
+```
 /* This code works on ESP32 ONLY, 
    If you are going to use ESP8266, then replace WiFi.h to ESP8266WiFi.h
    This was tested on ESP32 ( v1DevKit)
@@ -234,3 +256,5 @@ void loop()
   delay(2000);
   */
 }
+
+```
